@@ -3,5 +3,8 @@ services:
   shell:
     image: eduardoshanahan/git_gitextras:latest
     container_name: es_git_gitextras
+    volumes:
+      - ./:/content
+    working_dir: /content
     entrypoint:
-      - /bin/sh
+      - /bin/bash

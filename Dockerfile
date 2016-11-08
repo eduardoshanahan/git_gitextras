@@ -7,8 +7,10 @@ RUN apk update \
 &&  git clone https://github.com/tj/git-extras.git \
 &&  cd git-extras \
 &&  git checkout $(git describe --tags $(git rev-list --tags --max-count=1)) \
-&&  make install \
+&&  make install PREFIX=/usr \
+&&  apk add bash \
+&&  apk add man \
 &&  rm -r /var/cache/apk \
 &&  apk del .install_dependencies
 
-ENTRYPOINT /bin/sh
+ENTRYPOINT /bin/bash
