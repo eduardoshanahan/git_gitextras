@@ -13,4 +13,4 @@ RUN apk update \
 &&  rm -r /var/cache/apk \
 &&  apk del .install_dependencies
 
-ENTRYPOINT /bin/bash
+ENTRYPOINT ["/bin/bash"]
