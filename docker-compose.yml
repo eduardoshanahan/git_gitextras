@@ -1,5 +1,7 @@
-version: "2"
+version: "3"
+
 services:
+
   shell:
     image: eduardoshanahan/git_gitextras:latest
     container_name: es_git_gitextras

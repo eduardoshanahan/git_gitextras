@@ -1,21 +1,37 @@
 # Docker image with Git and Git Extras, based in Alpine
 
-## Running an interactive session
+## Building
 
-```bash
-docker run -it --rm eduardoshanahan/git_gitextras
+```
+docker build . -t eduardoshanahan/git_gitextras:latest
+```
+
+## Running an interactive test
+
+```
+docker run --rm -it eduardoshanahan/git_gitextras:latest
 ```
 
 Or with Docker Compose
 
-```bash
+```
 docker-compose run --rm shell
+```
+
+## Building an image in Docker Hub
+
+If for any reason the tagged build fails, you can fire a fresh one running
+
+```
+./build_image.sh
 ```
 
 ## Development
 
-If you want to make some changes and version it, [bumpversion](https://pypi.python.org/pypi/bumpversion) is available
+To send the commits to the remote server, you can use the script
 
-```bash
-bumpversion patch
 ```
+./save.sh
+```
+
+which will also create a new tag if the version is updated.
