@@ -1,4 +1,4 @@
-FROM eduardoshanahan/git:2.13.5.1
+FROM eduardoshanahan/git:2.13.5.2
 
 LABEL maintainer 'Eduardo Shanahan <contact@eduardoshanahan.com>'
 
